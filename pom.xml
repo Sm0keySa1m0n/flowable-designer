@@ -4,7 +4,7 @@
 
 	<groupId>org.flowable.designer</groupId>
 	<artifactId>org.flowable.designer.root</artifactId>
-	<version>5.22.0</version>
+	<version>5.23.0</version>
 	<packaging>pom</packaging>
 
 	<name>Flowable Designer - Root project</name>

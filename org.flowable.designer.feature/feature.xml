@@ -2,7 +2,7 @@
 <feature
       id="org.flowable.designer.feature"
       label="Flowable Eclipse BPMN 2.0 Designer"
-      version="5.22.0"
+      version="5.23.0"
       provider-name="Flowable">
 
    <description url="http://www.flowable.org">
@@ -92,51 +92,30 @@ This Agreement is governed by the laws of the State of New York and the intellec
 
    <plugin
          id="org.flowable.designer.libs"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.flowable.designer.gui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.flowable.designer.eclipse"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.flowable.designer.integration"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.flowable.designer.help"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.flowable.designer.validation.bpmn20"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.flowable.designer.util"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
 </feature>
