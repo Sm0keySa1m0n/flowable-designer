@@ -26,7 +26,7 @@ Require-Bundle: org.eclipse.graphiti,
  org.apache.commons.io,
  org.apache.commons.codec
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: 
  org.activiti.designer.eclipse,
  org.activiti.designer.eclipse.common,

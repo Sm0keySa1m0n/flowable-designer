@@ -114,7 +114,7 @@ Export-Package: com.fasterxml.jackson.databind,
    org.joda.time.chrono,
    org.joda.time.tz,
    org.joda.time.format"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.apache.commons.lang
 Bundle-Vendor: Flowable
 Bundle-ClassPath: .,
