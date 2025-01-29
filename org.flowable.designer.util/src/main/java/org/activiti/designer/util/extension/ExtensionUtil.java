@@ -100,10 +100,7 @@ public final class ExtensionUtil {
     providedCustomUserTaskDescriptors.addAll(descriptors);
   }
 
-  public static final Set<PaletteEntry> getDisabledPaletteEntries(IProject project) {
-
-    Set<PaletteEntry> result = new HashSet<PaletteEntry>();
-
+  private static IJavaProject getJavaProject(IProject project) {
     // Determine the project
     IJavaProject javaProject = null;
     try {
@@ -114,7 +111,14 @@ public final class ExtensionUtil {
     } catch (CoreException e) {
       // skip, not a Java project
     }
+    return javaProject;
+  }
 
+  public static final Set<PaletteEntry> getDisabledPaletteEntries(IProject project) {
+
+    Set<PaletteEntry> result = new HashSet<PaletteEntry>();
+
+    IJavaProject javaProject = getJavaProject(project);
     if (javaProject != null) {
 
       try {
@@ -446,14 +450,7 @@ public final class ExtensionUtil {
 
     List<CustomServiceTask> result = new ArrayList<CustomServiceTask>();
 
-    // Determine the project
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
-
+    IJavaProject javaProject = getJavaProject(project);
     if (javaProject != null) {
 
       // get the contexts first
@@ -481,14 +478,7 @@ public final class ExtensionUtil {
 
     List<CustomUserTask> result = new ArrayList<CustomUserTask>();
 
-    // Determine the project
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
-
+    IJavaProject javaProject = getJavaProject(project);
     if (javaProject != null) {
 
       // get the contexts first
@@ -519,13 +509,7 @@ public final class ExtensionUtil {
 
     addToCustomServiceTasks(result);
 
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
-
+    IJavaProject javaProject = getJavaProject(project);
     if (javaProject != null) {
 
       try {
@@ -658,13 +642,7 @@ public final class ExtensionUtil {
 
     addToCustomUserTasks(result);
 
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
-
+    IJavaProject javaProject = getJavaProject(project);
     if (javaProject != null) {
 
       try {
