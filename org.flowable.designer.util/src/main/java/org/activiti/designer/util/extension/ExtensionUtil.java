@@ -41,6 +41,7 @@ import org.activiti.designer.util.eclipse.ActivitiUiUtil;
 import org.activiti.designer.util.eclipse.ExtensionConstants;
 import org.apache.commons.lang.StringUtils;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IProjectNature;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -106,7 +107,10 @@ public final class ExtensionUtil {
     // Determine the project
     IJavaProject javaProject = null;
     try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
+      IProjectNature nature = project.getNature(JavaCore.NATURE_ID);
+      javaProject = nature instanceof IJavaProject
+        ? (IJavaProject) nature
+        : JavaCore.create(project);
     } catch (CoreException e) {
       // skip, not a Java project
     }
